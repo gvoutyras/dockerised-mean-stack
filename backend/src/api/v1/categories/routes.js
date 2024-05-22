@@ -4,8 +4,8 @@ const services = require("./services");
 
 module.exports = () => {
   router
-    .post("/:category", services.newCategory)
-    .get("/fetch", services.getCategories)
+    .post("/new", services.newCategory)
+    .get("/", services.getCategories)
     .delete("/:category", services.deleteCategory);
 
   return router;

@@ -6,8 +6,8 @@ module.exports = () => {
   router
     .post("/new", services.createArticle)
     .get("/fetchMany", services.fetchManyArticles)
-    .get("/fetch/:id", services.fetchArticle)
-    .post("/edit/:id", services.editArticle)
+    .get("/:id", services.fetchArticle)
+    .post("/:id", services.editArticle)
     .delete("/:id", services.deleteArticle);
 
   return router;
