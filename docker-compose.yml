@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  database:
+    image: mongo:4.0.10-xenial
+    container_name: bandbeat-database
+    restart: "no"
+    command:
+      - --auth
+      - --bind_ip_all
+      - --port=27017
+      - --setParameter=enableLocalhostAuthBypass=true
+      - --timeStampFormat=iso8601-utc
+    volumes:
+      - ./logs/database:/var/log/mongodb
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=alpine
+    ports:
+      - 27017:27017
