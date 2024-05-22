@@ -1,0 +1,15 @@
+.loginField {
+  text-align: left;
+}
+
+.loginInput {
+  margin-bottom: 20px;
+}
+
+.loginBtn {
+  text-align: center;
+}
+
+.loginCard {
+  display: block;
+}
