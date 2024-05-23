@@ -18,6 +18,11 @@
         <td>
           <p-button
             [disabled]="!showActions"
+            (click)="openEditModal(article.articleId)"
+            >Edit</p-button
+          >
+          <p-button
+            [disabled]="!showActions"
             (click)="deleteArticle(article.articleId)"
             >Delete</p-button
           >

@@ -1,0 +1,28 @@
+<div class="card flex justify-content-center">
+  <p-dialog
+    header="{{ article.title }}"
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '40rem' }"
+  >
+    <div class="grid">
+      <div class="col-9">
+        <span class="p-text-secondary block mb-5">{{
+          article.description
+        }}</span>
+      </div>
+      <div class="col-3">
+        <span class="p-text-secondary block mb-3"
+          >Category: {{ article.category }}</span
+        >
+      </div>
+    </div>
+    <app-read-only-text *ngIf="!isEdit" [text]="article.content" />
+    <app-edit-text *ngIf="isEdit" [text]="article.content" />
+
+    <div class="flex justify-content-end gap-2 p-3">
+      <p-button label="Save" (click)="saveEditedArticle()" />
+      <p-button label="Close" (click)="visible = false" />
+    </div>
+  </p-dialog>
+</div>

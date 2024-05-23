@@ -19,6 +19,8 @@ import { BadgeModule } from 'primeng/badge';
 import { RippleModule } from 'primeng/ripple';
 import { AvatarModule } from 'primeng/avatar';
 import { ImageModule } from 'primeng/image';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -28,6 +30,10 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { MenuProfileImageComponent } from './global/menu-profile-image/menu-profile-image.component';
 import { SidebarComponent } from './global/components/sidebar/sidebar.component';
 import { NavigationSingletonService } from './global/services/navigation-singleton.service';
+import { ArticleModalComponent } from './global/components/article-modal/article-modal.component';
+import { ArticleModalSingletonService } from './global/services/article-modal-singleton.service';
+import { ReadOnlyTextComponent } from './global/components/read-only-text/read-only-text.component';
+import { EditTextComponent } from './global/components/edit-text/edit-text.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +46,9 @@ import { NavigationSingletonService } from './global/services/navigation-singlet
     MenuProfileImageComponent,
     SidebarComponent,
     SidebarComponent,
+    ArticleModalComponent,
+    ReadOnlyTextComponent,
+    EditTextComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +68,10 @@ import { NavigationSingletonService } from './global/services/navigation-singlet
     RippleModule,
     AvatarModule,
     ImageModule,
+    DialogModule,
+    InputTextareaModule,
   ],
-  providers: [NavigationSingletonService],
+  providers: [NavigationSingletonService, ArticleModalSingletonService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
