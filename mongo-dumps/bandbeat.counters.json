@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "664e0d6731cd67eba435c8e2"
+  },
+  "id": "articleId",
+  "reference_value": null,
+  "seq": 11
+},
+{
+  "_id": {
+    "$oid": "664e0dcc31cd67eba435c956"
+  },
+  "id": "categoryId",
+  "reference_value": null,
+  "seq": 17
+},
+{
+  "_id": {
+    "$oid": "664f41024aea470264dba617"
+  },
+  "id": "userId",
+  "reference_value": null,
+  "seq": 3
+}]

@@ -21,4 +21,8 @@
       </tr>
     </ng-template>
   </p-table>
+  <p-button severity="secondary" (click)="createCategory()"
+    >Create Category</p-button
+  >
+  <app-create-category-modal [visible]="categoryModal" />
 </div>

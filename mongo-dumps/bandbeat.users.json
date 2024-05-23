@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "664f4102cb5583945809941d"
+  },
+  "username": "user",
+  "password": "$2b$10$S0cwWUJS/HR9YRT6xFxUEOmrDAzj6ld2wXDilhkdrCihVGAJw5G9O",
+  "userId": 2,
+  "role": "user",
+  "fullname": "Eric Clapton",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664f4145cb55839458099421"
+  },
+  "username": "admin",
+  "password": "$2b$10$9cohnaeDVDA.yMUlyNqqNul5ScVB.hCZ81XKQiog5xD8flfc2o1ea",
+  "userId": 3,
+  "role": "admin",
+  "fullname": "David Gilmour",
+  "__v": 0
+}]

@@ -34,6 +34,7 @@ import { ArticleModalComponent } from './global/components/article-modal/article
 import { ArticleModalSingletonService } from './global/services/article-modal-singleton.service';
 import { ReadOnlyTextComponent } from './global/components/read-only-text/read-only-text.component';
 import { EditTextComponent } from './global/components/edit-text/edit-text.component';
+import { CreateCategoryModalComponent } from './global/components/create-category-modal/create-category-modal.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { EditTextComponent } from './global/components/edit-text/edit-text.compo
     ArticleModalComponent,
     ReadOnlyTextComponent,
     EditTextComponent,
+    CreateCategoryModalComponent,
   ],
   imports: [
     BrowserModule,

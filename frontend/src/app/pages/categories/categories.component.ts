@@ -14,6 +14,7 @@ import { Category } from '../../global/models/category/category.model';
 })
 export class CategoriesComponent {
   public showActions: boolean;
+  public categoryModal = false;
   categories!: Category[];
 
   constructor(
@@ -40,5 +41,9 @@ export class CategoriesComponent {
   public async deleteCategory(id: any) {
     await firstValueFrom(await this.categoryService.deleteCategory(id));
     this.categories = this.categories.filter((el) => el.categoryId !== id);
+  }
+
+  public createCategory() {
+    this.categoryModal = true;
   }
 }

@@ -23,9 +23,13 @@ export class CategoryService {
 
   public createCategory(name: String): Observable<ServerReponse> {
     return this.http
-      .post<ServerReponse>(`${this.hostURl}/api/v1/categories/new`, name, {
-        headers: this.headersService.setupHeaders(),
-      })
+      .post<ServerReponse>(
+        `${this.hostURl}/api/v1/categories/new`,
+        { name },
+        {
+          headers: this.headersService.setupHeaders(),
+        }
+      )
       .pipe(map((result) => new ServerReponse(result)));
   }
 

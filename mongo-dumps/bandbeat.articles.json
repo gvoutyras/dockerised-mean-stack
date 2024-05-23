@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "664e0d679344b5ddf96687af"
+  },
+  "title": "test1",
+  "content": "This is some updated shit too Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem",
+  "description": "this is not the1",
+  "category": "trash",
+  "articleId": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664e0d6c9344b5ddf96687b3"
+  },
+  "title": "test2",
+  "content": "sumthing1",
+  "description": "this is not the1",
+  "category": "trash",
+  "articleId": 3,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664e0d739344b5ddf96687b7"
+  },
+  "title": "test3",
+  "content": "sumthing1",
+  "description": "this is not the1",
+  "category": "fun",
+  "articleId": 4,
+  "__v": 0
+}]

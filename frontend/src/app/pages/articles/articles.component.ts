@@ -13,7 +13,7 @@ import { ArticleModalSingletonService } from '../../global/services/article-moda
 })
 export class ArticlesComponent {
   public showActions: boolean;
-  public showModal: boolean;
+  public showModal = false;
   private clickedDelete = false;
   private clickedEdit = false;
   articles!: Article[];
@@ -46,19 +46,16 @@ export class ArticlesComponent {
     this.articles = this.articles.filter((el) => el.articleId !== id);
   }
 
-  public async editArticle(id: String, content: String) {
-    // open new modal i guess
-    // await firstValueFrom(await this.articleService.editArticle(id, content));
-  }
-
   public async openEditModal(id: String) {
     this.clickedEdit = true;
+    this.showModal = true;
     const article = await this.getArticle(id);
     if (article) this.articleModalSingletonService.sendMessage(article, true);
     else console.log('No article!');
   }
 
   public async openArticle(id: String) {
+    this.showModal = true;
     if (this.clickedEdit) {
       this.clickedEdit = false;
       return;
