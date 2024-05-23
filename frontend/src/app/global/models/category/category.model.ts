@@ -1,4 +1,4 @@
-export class Article {
+export class Category {
   name: String;
   categoryId: Number;
 

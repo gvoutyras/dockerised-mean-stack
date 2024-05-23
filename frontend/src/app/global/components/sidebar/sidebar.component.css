@@ -1,0 +1,5 @@
+.fullheight {
+  display: flex;
+  height: 96vh;
+  margin-top: 10px;
+}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { NavbarComponent } from './global/navbar/navbar.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { MenuProfileImageComponent } from './global/menu-profile-image/menu-profile-image.component';
+import { SidebarComponent } from './global/components/sidebar/sidebar.component';
+import { NavigationSingletonService } from './global/services/navigation-singleton.service';
 
 @NgModule({
   declarations: [
@@ -35,10 +38,13 @@ import { MenuProfileImageComponent } from './global/menu-profile-image/menu-prof
     ArticlesComponent,
     CategoriesComponent,
     MenuProfileImageComponent,
+    SidebarComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CardModule,
@@ -54,7 +60,7 @@ import { MenuProfileImageComponent } from './global/menu-profile-image/menu-prof
     AvatarModule,
     ImageModule,
   ],
-  providers: [],
+  providers: [NavigationSingletonService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

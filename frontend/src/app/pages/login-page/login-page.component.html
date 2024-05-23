@@ -1,9 +1,6 @@
 <div class="card flex justify-content-center">
-  <p-card
-    header="Advanced Card"
-    subheader="Card Subheader"
-    [style]="{ width: '360px' }"
-  >
+  <p-card header="Advanced Card" [style]="{ width: '360px' }">
+    <div *ngIf="loginFail">Login Failed</div>
     <div class="loginForm">
       <!-- <div class="loginField"> -->
       <label for="username">Username</label>
@@ -12,8 +9,8 @@
         type="text"
         id="username"
         pInputText
-        formControlName="text"
         class="loginInput"
+        [(ngModel)]="username"
       />
       <br />
       <label for="password">Password</label>
@@ -21,8 +18,8 @@
         type="text"
         id="password"
         pInputText
-        formControlName="text"
         class="loginInput"
+        [(ngModel)]="password"
       />
 
       <div class="flex gap-3 mt-1 loginBtn">

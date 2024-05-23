@@ -1,0 +1,7 @@
+## Users
+username: user
+password: 1234
+role: user
+--
+username: admin
+password: word5678
