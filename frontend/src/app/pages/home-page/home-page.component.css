@@ -1,0 +1,17 @@
+.fullheight {
+  display: flex;
+  height: 96vh;
+  margin-top: 10px;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.sidetable {
+  background-color: transparent;
+}
+
+.outtergrid {
+  text-align: center;
+}

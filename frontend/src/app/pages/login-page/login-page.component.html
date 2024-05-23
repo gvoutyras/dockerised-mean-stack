@@ -1,38 +1,38 @@
-<!-- <div class="loginForm"> -->
-<p-card
-  header="Advanced Card"
-  subheader="Card Subheader"
-  [style]="{ width: '360px' }"
->
-  <div class="loginForm">
-    <!-- <div class="loginField"> -->
-    <label for="username">Username</label>
-    <!-- </div> -->
-    <input
-      type="text"
-      id="username"
-      pInputText
-      formControlName="text"
-      class="loginInput"
-    />
-    <br />
-    <label for="password">Password</label>
-    <input
-      type="text"
-      id="password"
-      pInputText
-      formControlName="text"
-      class="loginInput"
-    />
-
-    <div class="flex gap-3 mt-1 loginBtn">
-      <p-button
-        label="Login"
-        class="w-full"
-        styleClass="w-full"
-        (click)="onClick()"
+<div class="card flex justify-content-center">
+  <p-card
+    header="Advanced Card"
+    subheader="Card Subheader"
+    [style]="{ width: '360px' }"
+  >
+    <div class="loginForm">
+      <!-- <div class="loginField"> -->
+      <label for="username">Username</label>
+      <!-- </div> -->
+      <input
+        type="text"
+        id="username"
+        pInputText
+        formControlName="text"
+        class="loginInput"
       />
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="text"
+        id="password"
+        pInputText
+        formControlName="text"
+        class="loginInput"
+      />
+
+      <div class="flex gap-3 mt-1 loginBtn">
+        <p-button
+          label="Login"
+          class="w-full"
+          styleClass="w-full"
+          (click)="onClick()"
+        />
+      </div>
     </div>
-  </div>
-</p-card>
-<!-- </div> -->
+  </p-card>
+</div>
