@@ -8,7 +8,6 @@ export class RefreshCategoriesSingletonService {
   private subject = new Subject<any>();
 
   sendMessage(message: object) {
-    console.log('send refresh');
     this.subject.next(message);
   }
 

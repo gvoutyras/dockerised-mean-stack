@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   backend:
-    image: bandbeat-back
+    image: gvout/bandbeat-back:latest
     build: ./backend
     container_name: bandbeat-back
     restart: always
@@ -16,8 +16,8 @@ services:
       - bandbeat-network
 
   frontend:
+    image: gvout/bandbeat-front:latest
     container_name: bandbeat-front
-    image: bandbeat-front
     build:
       context: ./frontend
     restart: "no"

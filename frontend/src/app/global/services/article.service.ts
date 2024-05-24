@@ -70,7 +70,6 @@ export class ArticleService {
   }
 
   public editArticle(id: String, content: String) {
-    console.log(content);
     return this.http
       .post<ServerReponse>(
         `${this.hostURl}/api/v1/articles/${id}`,

@@ -37,7 +37,6 @@ export class ArticleModalComponent {
 
   @ViewChild(EditTextComponent) childArticle: { text: String };
   async saveEditedArticle() {
-    console.log(this.childArticle);
     await lastValueFrom(
       this.articleService.editArticle(
         this.article.articleId.toString(),

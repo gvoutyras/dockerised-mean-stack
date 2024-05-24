@@ -24,8 +24,6 @@ export class LoginPageComponent {
 
   public onClick() {
     this.initLogin();
-    // console.log('Login');
-    // this.router.navigate(['home']);
   }
 
   async initLogin() {

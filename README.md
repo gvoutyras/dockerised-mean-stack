@@ -23,3 +23,6 @@ The login panel send a request to the user/login endpoint and then stores in the
 - The access level (role) of the user
 
 I have also created 4 singletons that work as Event Emmiters in order to achieve real time refreshing after CRUD operations on the data. (e.g. WHen an article gets deleted, fire up the singleton to re-fetch the data). Other than that the angular project follows a pretty common flow.
+
+## Further Addition
+I would probably implement a logger on backend (possibly winston)
