@@ -1,0 +1,40 @@
+<div class="card flex justify-content-center">
+  <p-dialog
+    header="Create Category"
+    [modal]="true"
+    [(visible)]="visible"
+    [style]="{ width: '40rem' }"
+  >
+    <div class="card flex justify-content-center">
+      <label for="title">Article Title</label>
+      <input type="text" id="title" [(ngModel)]="article.title" />
+    </div>
+    <app-categories-dropdown />
+    <div class="card flex justify-content-center">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        rows="5"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="article.description"
+      >
+      </textarea>
+    </div>
+    <div class="card flex justify-content-center">
+      <label for="content">Content</label>
+      <textarea
+        rows="5"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="article.content"
+        id="content"
+      >
+      </textarea>
+    </div>
+    <div class="flex justify-content-end gap-2 p-3">
+      <p-button label="Save" (click)="createArticle()" />
+      <p-button label="Close" (click)="visible = false" />
+    </div>
+  </p-dialog>
+</div>

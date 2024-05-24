@@ -21,6 +21,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { ImageModule } from 'primeng/image';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -35,6 +36,9 @@ import { ArticleModalSingletonService } from './global/services/article-modal-si
 import { ReadOnlyTextComponent } from './global/components/read-only-text/read-only-text.component';
 import { EditTextComponent } from './global/components/edit-text/edit-text.component';
 import { CreateCategoryModalComponent } from './global/components/create-category-modal/create-category-modal.component';
+import { CreateArticleModalComponent } from './global/components/create-article-modal/create-article-modal.component';
+import { CategoriesDropdownComponent } from './global/components/categories-dropdown/categories-dropdown.component';
+import { RefreshArticlesSingletonService } from './global/services/refresh-articles-singleton.service';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,8 @@ import { CreateCategoryModalComponent } from './global/components/create-categor
     ReadOnlyTextComponent,
     EditTextComponent,
     CreateCategoryModalComponent,
+    CreateArticleModalComponent,
+    CategoriesDropdownComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,8 +78,14 @@ import { CreateCategoryModalComponent } from './global/components/create-categor
     ImageModule,
     DialogModule,
     InputTextareaModule,
+    DropdownModule,
   ],
-  providers: [NavigationSingletonService, ArticleModalSingletonService],
+  providers: [
+    NavigationSingletonService,
+    ArticleModalSingletonService,
+    RefreshArticlesSingletonService,
+    RefreshArticlesSingletonService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

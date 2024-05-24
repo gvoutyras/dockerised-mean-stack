@@ -1,0 +1,10 @@
+<div class="card flex justify-content-center">
+  <label for="category">Category</label>
+  <p-dropdown
+    [options]="categories"
+    [(ngModel)]="selectedCategory"
+    optionLabel="name"
+    placeholder="Select a Category"
+    id="category"
+  />
+</div>
