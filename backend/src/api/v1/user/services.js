@@ -37,7 +37,7 @@ module.exports = {
         { username: user.username, role: user.role, fullname: user.fullname },
         "your-secret-key",
         {
-          expiresIn: "1h",
+          expiresIn: "365d",
         }
       );
       res.status(200).json({ success: true, token });

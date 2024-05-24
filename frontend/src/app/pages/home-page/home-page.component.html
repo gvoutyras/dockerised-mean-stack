@@ -4,11 +4,12 @@
   </div>
   <div class="col-10">
     <div
-      class="text-center p-3 border-round-sm bg-primary font-bold fullheight"
+      class="text-center p-3 border-round-sm bg-primary font-bold fullheight opacity"
     >
-      <app-articles *ngIf="activeComp.articles" />
+      <div class="outtergrid">
+        <app-articles *ngIf="activeComp.articles" />
+      </div>
       <app-categories *ngIf="activeComp.categories" />
     </div>
   </div>
-  <!-- <app-article-modal /> -->
 </div>
