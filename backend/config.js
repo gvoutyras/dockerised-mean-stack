@@ -5,7 +5,7 @@ module.exports = {
     password: "alpine",
     name: "bandbeat",
     authSrc: "admin",
-    host: "127.0.0.1",
+    host: process.env.DB_HOST || "127.0.0.1",
   },
   backendPort: 3000,
 };

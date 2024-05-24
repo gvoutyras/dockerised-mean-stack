@@ -1,6 +1,31 @@
 version: "3.7"
 
 services:
+  backend:
+    image: bandbeat-back
+    build: ./backend
+    container_name: bandbeat-back
+    restart: always
+    depends_on:
+      - database
+    environment:
+      DB_HOST: "database"
+    ports:
+      - 3000:3000
+    networks:
+      - bandbeat-network
+
+  frontend:
+    container_name: bandbeat-front
+    image: bandbeat-front
+    build:
+      context: ./frontend
+    restart: "no"
+    ports:
+      - 4200:4200
+    networks:
+      - bandbeat-network
+
   database:
     image: mongo:4.0.10-xenial
     container_name: bandbeat-database
@@ -11,10 +36,14 @@ services:
       - --port=27017
       - --setParameter=enableLocalhostAuthBypass=true
       - --timeStampFormat=iso8601-utc
-    volumes:
-      - ./logs/database:/var/log/mongodb
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=alpine
     ports:
       - 27017:27017
+    networks:
+      - bandbeat-network
+
+networks:
+  bandbeat-network:
+    name: bandbeat-network
