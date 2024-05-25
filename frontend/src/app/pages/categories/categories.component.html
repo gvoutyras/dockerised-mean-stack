@@ -1,4 +1,5 @@
 <div class="card fullwidth">
+  <h2>Categories</h2>
   <p-table [value]="categories" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
       <tr>
@@ -21,8 +22,10 @@
       </tr>
     </ng-template>
   </p-table>
-  <p-button severity="secondary" (click)="createCategory()"
-    >Create Category</p-button
-  >
+  <div class="m-4">
+    <p-button severity="secondary" (click)="createCategory()"
+      >Create Category</p-button
+    >
+  </div>
   <app-create-category-modal [visible]="categoryModal" />
 </div>
