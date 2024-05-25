@@ -34,3 +34,13 @@ I have also created 4 singletons that work similarly to Event Emmiter in order t
 - Enrich UI
 - Add i18n for internationalisation
 - Work a little more on the /user/ endpoints (give/take privileges, list users)
+- Better responsiveness
+
+## Disclaimer
+
+This project was made an **exhibition** of my knowledge on MEAN Stack and not a production ready site. So some features were either loosely designed, or completely skipped. Some of these features would be: 
+- logging
+- pagination
+- stricter error handling
+- stricter mongoose schemas
+- more organised commits & file structure
