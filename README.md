@@ -8,7 +8,7 @@ username: admin\
 password: word5678\
 role: admin
 
-> Only users with the admin role are able to edit and delete articles\
+> Only users with the admin role are able to edit and delete articles
 
 ### Minor PSA
 > The generated JWT has a duration of 1 year
@@ -44,3 +44,4 @@ This project was made an **exhibition** of my knowledge on MEAN Stack and not a 
 - stricter error handling
 - stricter mongoose schemas
 - more organised commits & file structure
+- token refreshing
