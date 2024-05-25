@@ -3,9 +3,10 @@ version: "3.7"
 services:
   backend:
     image: gvout/bandbeat-back:latest
-    build: ./backend
     container_name: bandbeat-back
-    restart: always
+    build:
+      context: ./backend
+    restart: "no"
     depends_on:
       - database
     environment:
